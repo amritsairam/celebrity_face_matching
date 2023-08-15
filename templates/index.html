@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web App</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Custom CSS (if any) -->
+    <!-- <link rel="stylesheet" href="static/styles.css"> -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Homee</a></li>
+            <!-- Add more links here if needed -->
+        </ul>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">bollywood face matching</h1>
+        
+        <div class="row mt-5">
+            <div class="col-md-6 text-center">
+                <a href="/choose_computer" class="btn btn-primary btn-lg btn-block">Choose Image from Computer</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <a href="/choose_webcam" class="btn btn-secondary btn-lg btn-block">Capture Image via Webcam</a>
+            </div>
+        </div>
+        
+        {% block content %}{% endblock %}
+    </div>
+    
+    <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

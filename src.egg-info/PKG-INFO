@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: src
+Version: 0.0.1
+Summary: A small package for Which Bollywood Celebrity You look like? Deep Learning Project
+Home-page: https://github.com/amritsairam/Which-Bollywood-Celebrity-You-look-like
+Author: amrit sairam
+Author-email: amritsairam@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+hello

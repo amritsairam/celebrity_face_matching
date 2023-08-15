@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Streaming</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #video-stream {
+            width: 100%;
+        }
+        #capture-form {
+            margin-top: 20px;
+        }
+        .result-section {
+            margin-top: 40px;
+        }
+        .prediction {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+        .predicted-actor {
+            display: block;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Live Streaming</h1>
+        <img id="video-stream" src="{{ url_for('video') }}" alt="Video Stream">
+        <form id="capture-form" action="{{ url_for('capture_frame') }}" method="post">
+            <label for="frame-name">Enter frame name:</label>
+            <input type="text" id="frame-name" name="frame_name" placeholder="Enter frame name" required>
+            <button type="submit" class="btn btn-primary">Capture Frame</button>
+        </form>
+        
+    </div>
+</body>
+</html>
